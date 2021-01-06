@@ -20,7 +20,9 @@ import cucumber.api.testng.TestNGCucumberRunner;
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt"
-        })
+        },
+        tags = {"@feature1"}
+)
 
 public class TestRunner extends TestBase {
     private TestNGCucumberRunner testNGCucumberRunner;

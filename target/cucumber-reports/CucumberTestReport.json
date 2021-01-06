@@ -3,70 +3,66 @@
     "line": 2,
     "elements": [
       {
-        "line": 14,
+        "line": 4,
         "name": "Free CRM Login Test Scenario",
         "description": "",
-        "id": "free-crm-login-feature;free-crm-login-test-scenario;;2",
+        "id": "free-crm-login-feature;free-crm-login-test-scenario",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 514590400,
+              "duration": 22129709200,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user is already on Login Page",
-            "match": {
-              "location": "LoginStepDefinition.user_already_on_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 15188000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "title of login page is Free CRM",
-            "match": {
-              "location": "LoginStepDefinition.title_of_login_page_is_free_CRM()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 184092500,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user enters \"naveenk\" and \"test@123\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "naveenk",
-                  "offset": 13
-                },
-                {
-                  "val": "test@123",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginStepDefinition.user_enters_username_and_password(String,String)"
-            },
-            "matchedColumns": [
-              0,
-              1
+            "comments": [
+              {
+                "line": 5,
+                "value": "#    Given user is already on Login Page"
+              },
+              {
+                "line": 6,
+                "value": "#    When title of login page is Free CRM"
+              },
+              {
+                "line": 7,
+                "value": "#    Then user enters \"\u003cusername\u003e\" and \"\u003cpassword\u003e\""
+              },
+              {
+                "line": 8,
+                "value": "#    Then user gets data from excel file"
+              }
             ],
+            "line": 9,
+            "name": "Select dropdown",
+            "match": {
+              "location": "LoginStepDefinition.selectdropdown()"
+            },
             "keyword": "Then "
           }
-        ],
-        "tags": [
-          {
-            "line": 1,
-            "name": "@feature1"
-          }
         ]
+      },
+      {
+        "comments": [
+          {
+            "line": 10,
+            "value": "#    Examples:"
+          },
+          {
+            "line": 11,
+            "value": "#      | username | password |"
+          },
+          {
+            "line": 12,
+            "value": "#      | naveenk  | test@123 |"
+          }
+        ],
+        "line": 14,
+        "name": "Rest API End To End",
+        "description": "",
+        "id": "free-crm-login-feature;rest-api-end-to-end",
+        "type": "scenario",
+        "keyword": "Scenario"
       }
     ],
     "name": "Free CRM Login Feature",

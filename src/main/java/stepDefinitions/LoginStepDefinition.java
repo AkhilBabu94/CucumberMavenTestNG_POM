@@ -4,6 +4,7 @@ import Element.Element;
 import impl.LoginstepImpl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -11,11 +12,15 @@ import org.testng.Assert;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import java.awt.*;
+import java.io.IOException;
+
 import static Driver.TestBase.driver;
 
 public class LoginStepDefinition {
 
-	 LoginstepImpl loginstepimpl = new LoginstepImpl();
+	 LoginstepImpl loginstepimpl = new LoginstepImpl(driver);
 
 	 @Given("user is already on Login Page")
 	 public void user_already_on_login_page(){
@@ -30,6 +35,12 @@ public class LoginStepDefinition {
 	 @When("title of login page is Free CRM")
 	 public void title_of_login_page_is_free_CRM(){
 	 	loginstepimpl.verifyTitle();
+	 }
+
+	 @Then("Select dropdown")
+	 public void selectdropdown() throws InterruptedException, IOException, AWTException {
+//	 	loginstepimpl.ajax();
+//		 loginstepimpl.selectdropdown();
 	 }
 	
 	 //Reg Exp:

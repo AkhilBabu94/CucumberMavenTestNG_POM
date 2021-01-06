@@ -2,10 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" verbose="1" parallel="tests"
 	thread-count="1" configfailurepolicy="continue">
-	<test name="FREE CRM Test" annotations="JDK"
+	<test name="FREE CRM Test" annotations="JDK" parallel="methods"  thread-count="1"
 		preserve-order="true">
 		<classes>
-			<class name="MyRunner.TestRunner" />
+			<class name="MyRunner.TestRunner"/>
 		</classes>
 	</test>
 </suite>
